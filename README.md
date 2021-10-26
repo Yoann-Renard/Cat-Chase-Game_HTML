@@ -11,6 +11,6 @@ You can set the cat's ***speed*** and ***size***.
 
 You can use ***(E)*** and ***(R)*** to cast useful spells.
 
-Local ***leaderboard*** available.
+Local ***leaderboard***.
 
 You can ***personalize*** every sprite ( cat / mouse / roomba ) by **clicking** on them.
