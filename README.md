@@ -3,7 +3,7 @@ A web game were you have to escape the cat as long as possible.
 
 With sound.
 
-Death counter.
+With death counter.
 
 You can pause and resume the game.
 
