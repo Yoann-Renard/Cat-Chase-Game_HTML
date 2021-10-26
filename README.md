@@ -5,7 +5,7 @@ With sound.
 
 With death counter.
 
-You can pause and resume the game.
+You can ***pause*** and ***resume*** the game.
 
 You can set the cat's ***speed*** and ***size***.
 
