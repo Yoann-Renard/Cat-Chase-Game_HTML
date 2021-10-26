@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_canvas.css">
+    <title>Canvas Game</title>
+    <script src="./js/script.js" charset="utf-8"></script>
+    </style>
+  </head>
+
+  <body onkeydown="power_trigger(event)">
+
+    <canvas id="canvas" width="1500" height="600" >
+    Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <div id="selec_vitesse" >
+      <p>Vitesse du chat :<br> <b onclick="add_speed()">+</b> <none id="affichage_vitesse"> 2 </none> <b onclick="sub_speed()">-</b> </p>
+    </div>
+
+    <div id="death_counter">
+      <p> Nombre de morts :<p id="dth"> 0 </p> </p>
+    </div>
+
+    <button hidden type="button" name="button" onclick="pause(); timer_pause_start();"  id="bouton1"> PAUSE </button>
+    <button hidden type="button" name="button" onclick="resume(); timer_pause_end();" id="bouton2"> RESUME </button>
+
+    <div id="selec_taille">
+      <p>Taille du chat :<br> <b onclick="add_taille()">+</b> <none id="affichage_taille"> 200 </none> <b onclick="sub_taille()">-</b> </p>
+    </div>
+
+    <div id="Timer">
+      <p>Temps en vie : <b id="temps_en_vie"> 0 s </b></p>
+    </div>
+
+    <div id="score_board">
+      <ul id="dernier_temps">
+        <li><p>Derniers Temps :</p> </li>
+        <li><p><b = id="temps0">-- s</b><br> <b = id="temps1">-- s</b><br> <b = id="temps2">-- s</b><br> <b = id="temps3">-- s</b><br> <b = id="temps4">-- s</b><br>
+          <b = id="temps5">-- s</b><br> <b = id="temps6">-- s</b><br> <b = id="temps7">-- s</b><br> <b = id="temps8">-- s</b><br> <b = id="temps9">-- s</b><br> <p>
+      </ul>
+      <ul id="meilleurs_temps">
+        <li><p>Meilleurs Temps :</p> </li>
+        <li><p><b = id="mtemps0">-- s</b><br> <b = id="mtemps1">-- s</b><br> <b = id="mtemps2">-- s</b><br> <b = id="mtemps3">-- s</b><br> <b = id="mtemps4">-- s</b><br>
+          <b = id="mtemps5">-- s</b><br> <b = id="mtemps6">-- s</b><br> <b = id="mtemps7">-- s</b><br> <b = id="mtemps8">-- s</b><br> <b = id="mtemps9">-- s</b><br> <p>
+      </ul>
+    </div>
+
+
+    <div id="selec_img">
+      <ul id="selec_cat">
+        <li><h1><b>Selectionne Le Chat :</b></h1></li>
+        <li><img src="./images/cat.png" alt="Basic Cat" id="Cat1" onclick="Cat_Swap('Cat1')"> </li>
+        <li><img src="./images/Evil_Cat.gif" alt="Evil Cat" id="Cat2" onclick="Cat_Swap('Cat2')"> </li>
+        <li><img src="./images/Nian_Cat.gif" alt="Nian Cat" id="Cat3" onclick="Cat_Swap('Cat3')"> </li>
+        <li><img src="./images/Pika.gif" alt="Pikatchu" id="Cat4" onclick="Cat_Swap('Cat4')"> </li>
+      </ul>
+
+      <ul id="selec_mouse">
+        <li><h1><b>Selectionne La Souris :</b></h1></li>
+        <li><img src="./images/mouse.png" alt="Basic Mouse" id="Mouse1" onclick="Mouse_Swap('Mouse1')"> </li>
+        <li><img src="./images/mouse2.gif" alt="Mouse 2" id="Mouse2" onclick="Mouse_Swap('Mouse2')"> </li>
+        <li><img src="./images/mouse3.png" alt="Mouse 3" id="Mouse3" onclick="Mouse_Swap('Mouse3')"> </li>
+        <li><img src="./images/mouse4.png" alt="Mouse 4" id="Mouse4" onclick="Mouse_Swap('Mouse4')"> </li>
+      </ul>
+
+      <ul id="selec_robot">
+        <li><h1><b>Selectionne Le Robot :</b></h1></li>
+        <li><img src="./images/robot2.png" alt="Robot" id="Robot1" onclick="Robot_Swap('Robot1')"> </li>
+        <li><img src="./images/robot.png" alt="Robot" id="Robot2" onclick="Robot_Swap('Robot2')"> </li>
+        <li><img src="./images/robot3.png" alt="Robot" id="Robot3" onclick="Robot_Swap('Robot3')"> </li>
+      </ul>
+    </div>
+
+    <div id="play">
+      <ul>
+        <li><h1><b>LANCER LA PARTIE :</b></h1></li>
+        <li><img src="./images/play.png" alt="bouton play" onclick="play(); timer_play();"> </li>
+      </ul>
+    </div>
+
+    <div id="power">
+      <ul>
+        <li><p><b>Pouvoirs :</b></p></li>
+        <li><p class="pwr">Téléportation(E) :</p></li>
+        <li><img src="./images/teleport.png" alt="teleport" id="teleport"></li>
+        <li><p class="pwr">Time Stop(R) :</p></li>
+        <li><img src="./images/stop.png" alt="timestop" id="stop"> </li>
+      </ul>
+
+    </div>
+    <p id="tele_cooldown" ><b class="cd">up</b></p>
+    <p id="stop_cooldown" ><b class="cd">up</b></p>
+
+
+    <audio hidden src="./audio/teleport_effect.mp3" id="teleport_effect"> </audio>
+    <audio hidden src="./audio/Hurt_Sound.mp3" id="Hurt_Sound"></audio>
+    <audio hidden src="./audio/stop_effect.mp3" id="stop_effect"></audio>
+  </body>
+</html>

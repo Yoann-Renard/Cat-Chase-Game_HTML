@@ -1,0 +1,246 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui;
+
+}
+
+body{
+  background-color: #333;
+  overflow: hidden;
+}
+
+button{
+  cursor: pointer;
+  background-color: rgba(102, 0, 0,0.5);
+  color: white;
+  padding: 5px;
+  position: absolute;
+}
+
+button[onclick="pause(); timer_pause_start();"]{
+  top: 10px;
+  right: 700px;
+}
+
+button[onclick="resume(); timer_pause_end();"]{
+  top: 10px;
+  right: 500px;
+}
+
+#selec_vitesse {
+  padding: 10px;
+  margin-left: 20px;
+  float: left;
+  margin-right: 50px;
+}
+
+#selec_taille{
+  padding: 10px;
+}
+
+#death_counter{
+  padding: 10px;
+  margin-left: 20px;
+  float: left;
+  margin-right: 100px;
+}
+
+
+
+
+div p b {
+  cursor: pointer;
+}
+
+p{
+  color: white;
+  font-size: 20px;
+
+}
+
+b{
+  font-size: 30px;
+  animation-name: color_change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#canvas{
+  cursor: none;
+  border:1px solid lightgrey;
+  float: left;
+  box-shadow: 0px 8px 16px 0px #4d4d4d;
+}
+
+#selec_img{
+  width: 99%;
+}
+
+#selec_cat{
+  margin-top: 60px;
+}
+
+
+#Timer {
+  float: left;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 100px;
+}
+
+#score_board{
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  float: left;
+}
+
+#score_board ul li p b{
+  font-size: 15px;
+  cursor: default;
+}
+#score_board ul li {
+  float: none;
+}
+#score_board ul{
+  margin: 5px;
+}
+
+ul{
+  float: left;
+  margin-right: 75px;
+  list-style-type: none;
+  color: white;
+}
+
+li{
+  float: left;
+  padding: 10px;
+}
+
+h1{
+  margin-top: 50px;
+}
+
+img[alt="Basic Cat"]{
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+img[alt="Evil Cat"]{
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+img[alt="Nian Cat"]{
+  width: 150px;
+  height: auto;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+img[alt="Pikatchu"]{
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+img[alt="Basic Mouse"]{
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+img[alt="Mouse 2"]{
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+img[alt="Mouse 3"]{
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
+img[alt="Mouse 4"]{
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+img[alt="bouton play"]{
+  width: 75px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+#Robot1, #Robot2, #Robot3{
+  margin-top: 40px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+
+@keyframes color_change {
+  from{color:red;}
+  to{color:yellow;}
+}
+
+#play{
+
+  z-index: 2;
+  position: absolute;
+  top: 200px;
+  left: 550px;
+
+}
+
+#play ul,#plat ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+#tele_cooldown{
+  position: absolute;
+  top: 560px;
+  left: 355px;
+  z-index: -1;
+}
+#stop_cooldown{
+  position: absolute;
+  top: 560px;
+  left: 573px;
+  z-index: -1;
+}
+
+#teleport{
+  width: 60px;
+  margin-top: -15px;
+}
+#stop{
+  width: 50px;
+  margin-top: -10px;
+}
+
+#power{
+  top: 550px;
+  position: absolute;
+  z-index: -1;
+}
+.cd{
+  font-size: 20px;
+}
+
+.pwr{
+  margin-top: 10px;
+}
